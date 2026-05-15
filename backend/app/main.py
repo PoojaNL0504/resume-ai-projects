@@ -4,8 +4,14 @@ from fastapi import FastAPI
 from app.routes import resume
 from app.routes import ats
 from fastapi.middleware.cors import CORSMiddleware
+from app.db.database import engine
+from app.db.models import Base
+
 
 app=FastAPI()
+
+Base.metadata.create_all(bind=engine)
+
 
 # include resume router
 app.include_router(resume.router)
