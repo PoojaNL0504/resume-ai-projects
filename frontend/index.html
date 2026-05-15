@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AI Resume Assistant</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<button id="themeToggle" onclick="toggleTheme()">🌙</button>
+<div class="app">
+
+    <!-- LEFT PANEL -->
+    <div class="sidebar">
+        <h2>AI Resume</h2>
+
+        <!-- Upload -->
+        <div class="section">
+            <p>Upload Resume</p>
+                <label class="file-upload">
+        <input type="file" id="resumeFile">
+        <span>📄 Choose Resume</span>
+    </label>
+
+            <button onclick="uploadResume()">Upload</button>
+        </div>
+
+      
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="main">
+
+        <!-- Chat -->
+        <div class="chat-box" id="chatBox">
+            <div class="bot">Hi 👋I'm your AI Resume Assistant!</div>
+        </div>
+
+        <!-- Input -->
+       <div class="chat-input">
+            <input type="text" id="question" placeholder="Ask about your resume or paste JD...">
+
+            <button type="button" onclick="handleUserInput()">Send</button>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Lucide CDN FIRST -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- Your JS AFTER -->
+<script src="./js/script.js"></script></body>
+</html>

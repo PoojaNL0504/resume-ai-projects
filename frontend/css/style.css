@@ -1,0 +1,343 @@
+/* ================= BASE ================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+/* ================= LAYOUT ================= */
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 28%;
+    padding: 25px;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.main {
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar h2 {
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section p {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 10px;
+    background: #020617;
+    color: white;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(90deg, cyan, #38bdf8);
+    transition: 0.3s;
+}
+
+.sidebar button:hover {
+    transform: scale(1.05);
+}
+
+/* ================= JOB CARDS ================= */
+.job-card {
+    background: rgba(30, 41, 59, 0.6);
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= CHAT ================= */
+.chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.user, .bot {
+    max-width: 70%;
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* user */
+.user {
+    background: linear-gradient(90deg, cyan, #38bdf8);
+    color: black;
+    margin-left: auto;
+}
+
+/* bot */
+.bot {
+    background: #1e293b;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ================= INPUT ================= */
+.chat-input {
+    display: flex;
+    padding: 15px;
+    background: rgba(2, 6, 23, 0.9);
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #020617;
+    color: white;
+}
+
+.chat-input button {
+    margin-left: 8px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    color: white;
+    transition: 0.3s;
+}
+
+.chat-input button:hover {
+    transform: scale(1.05);
+}
+
+/* ================= THEME TOGGLE ================= */
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background: linear-gradient(90deg, cyan, #38bdf8);
+    color: black;
+    z-index: 999;
+    transition: 0.3s;
+}
+
+#themeToggle:hover {
+    transform: scale(1.1);
+}
+
+/* ================= LIGHT THEME ================= */
+.light {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.light .sidebar {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+.light .main {
+    background: #f1f5f9;
+}
+
+.light .bot {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.light .user {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    color: white;
+}
+
+.light .chat-input {
+    background: #ffffff;
+}
+
+.light input,
+.light textarea {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+.light .sidebar button,
+.light .chat-input button {
+    background: linear-gradient(90deg, #6366f1, #8b5cf6);
+    color: white;
+}
+
+.light .sidebar h2 {
+    color: #292b6e;
+}
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+    margin-top: 10px;
+
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.action-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.5);
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+/* icon size */
+.action-btn i {
+    width: 16px;
+    height: 16px;
+}
+/* file */
+
+/* FILE UPLOAD (modern styled) */
+.file-upload {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.file-upload input {
+    display: none; /* hide ugly default */
+}
+
+.file-upload span {
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    background: rgba(18, 30, 49, 0.9);
+    border: 1px dashed rgba(255,255,255,0.2);
+    color: #94a3b8;
+    transition: 0.3s;
+}
+
+/* hover effect */
+.file-upload span:hover {
+    border-color: cyan;
+    color:  rgba(18, 30, 49, 0.9);
+    background: rgba(18, 29, 48, 0.6);
+}
+
+/* when file selected */
+.file-upload input:valid + span {
+    border: 1px solid cyan;
+    color: cyan;
+}
+.light .file-upload input:valid + span {
+    border:transparent;
+    color: cyan;
+}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+    .sidebar { width: 35%; }
+    .main { width: 65%; }
+}
+
+@media (max-width: 768px) {
+    .app { flex-direction: column;width: 80%; }
+
+    .sidebar {
+        width: 90%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .main {
+        width: 100%;
+        height: 100%;
+    }
+
+    .chat-input {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .chat-input button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .user, .bot {
+        max-width: 90%;
+        font-size: 14px;
+    }
+    .chat-input button:hover {
+    transform: none;
+
+    }
+
+    .sidebar button:hover {
+        transform: none;
+    }}
+
+@media (max-width: 480px) {
+    .sidebar { padding: 15px; }
+    .chat-box { padding: 10px; }
+
+    .user, .bot {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .chat-input { padding: 10px; }
+}
+

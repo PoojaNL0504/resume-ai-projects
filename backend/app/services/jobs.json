@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Python Developer",
+    "skills": ["python", "fastapi", "sql"]
+  },
+  {
+    "title": "Frontend Developer",
+    "skills": ["html", "css", "javascript", "react"]
+  },
+  {
+    "title": "AI Engineer",
+    "skills": ["python", "machine learning", "nlp"]
+  }
+]
