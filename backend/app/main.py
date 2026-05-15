@@ -13,7 +13,9 @@ app=FastAPI()
 # CORS middleware (allow all for now, can be restricted in production)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # allow all (for now)
+   allow_origins=[
+        "https://resume-ai-projects.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
