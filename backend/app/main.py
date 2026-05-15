@@ -16,6 +16,7 @@ app.add_middleware(
    allow_origins=[
         "https://resume-ai-projects.vercel.app"
     ],
+    access_control_allow_origin="https://resume-ai-projects.vercel.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
