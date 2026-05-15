@@ -10,6 +10,16 @@ from app.db.models import Base
 
 app=FastAPI()
 
+# CORS middleware (allow all for now, can be restricted in production)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # allow all (for now)
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 Base.metadata.create_all(bind=engine)
 
 
@@ -20,14 +30,7 @@ app.include_router(resume.router)
 def home():
     return {"message":"FastAPI is running"}
 
-# CORS middleware (allow all for now, can be restricted in production)
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # allow all (for now)
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+
 
 # include ATS router
 app.include_router(ats.router)
